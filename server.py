@@ -21,8 +21,11 @@ def sent_analyzer():
     joy_score = response['joy']
     sadness_score = response['sadness']
 
-    
-    return "For the given statement, the system response is 'anger': {}, 'disgust': {}, 'fear': {}, 'joy': {}, 'sadness': {}. The dominant emotion is {}.".format(anger_score,disgust_score,fear_score,joy_score,sadness_score,emotion)
+    if emotion is None:
+        return "Invalid input! Try again."
+    else:
+        
+        return "For the given statement, the system response is 'anger': {}, 'disgust': {}, 'fear': {}, 'joy': {}, 'sadness': {}. The dominant emotion is {}.".format(anger_score,disgust_score,fear_score,joy_score,sadness_score,emotion)
 
 
 
